@@ -1,5 +1,24 @@
 def cetak_table_perkalian(number):
-    pattern = ""
+    pattern = ''
+    List = []
+    for a in range (number+2) :
+        for b in range (1, number+1) :
+            Hasil = a*b 
+            List.append(Hasil)
+        List.append('\n')
+    # print(List)    
+
+    Hasil = " ".join(map(str, List))
+    Hasil2 = Hasil.replace(Hasil[0:19],'')
+    Hasil3 = Hasil2.replace(Hasil2[-31::],'\n')
+    # print(Hasil3)
+    Hasil4 = Hasil3.replace(Hasil3[19],'\n')
+    # print(Hasil4)
+    Hasil5 = Hasil4.replace(" \n", '\n')
+
+    pattern += Hasil5
+    for c in pattern :
+        print(c, end="")
     return pattern
 
 if __name__ == '__main__':

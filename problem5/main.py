@@ -1,6 +1,22 @@
 def mean_median(array_input):
     mean = 1.0
     median = 1
+    Length = len(array_input)
+    if Length > 0 :
+        for i in range (Length):
+            mean = sum(array_input)/Length
+
+        for j in range (len(array_input)) :
+            Nilai1 = array_input[int(Length/2)]
+
+            if Length % 2 == 0 :
+                Nilai2 = array_input[int(Length/2)-1]
+            else :
+                Nilai2 = array_input[int(Length/2)]
+
+            median = (Nilai1+Nilai2)/2
+    else :
+        return
     return (mean, median)
 
 if __name__ == '__main__':
